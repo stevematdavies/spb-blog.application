@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -24,6 +25,8 @@ public class Account {
     private String firstName;
 
     private String lastName;
+
+    private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "account")
     private List<Post> posts;
