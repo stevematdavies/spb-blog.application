@@ -22,6 +22,10 @@ public class AccountService {
         return repository.findById(id);
     }
 
+    public Optional<Account> getAccountByEmail(String email){
+        return repository.findAccountByEmail(email);
+    }
+
     public Account save(Account account){
         if (account.getId() == null){
             account.setCreatedAt(LocalDateTime.now());

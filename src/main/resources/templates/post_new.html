@@ -1,0 +1,36 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title BLOG :: New Post></title>
+</head>
+<body>
+     <div class="container">
+         <a th:href="@{/}">Home</a>
+    </div>
+
+     <form action="#" th:action="@{'/posts/new'}" th:object="${post}" method="post">
+
+         <input type="hidden" th:field="*{account}" />
+         <input type="hidden" th:field="*{createdAt}" />
+         <h2 class="text-center">Write new Post</h2>
+
+         <div>
+             <label for="new-post-title">Title</label>
+             <input type="text" id="new-post-title" th:field="*{title}" placeholder="Post title">
+         </div>
+
+         <div>
+             <label for="new-post-body">Body</label>
+             <textarea id="new-post-body" th:field="*{body}"></textarea>
+         </div>
+
+         <input type="submit" value="Publish Post">
+
+     </form>
+
+</body>
+</html>
