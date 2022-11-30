@@ -1,8 +1,9 @@
 package com.steve.springbootblogapplication.repository;
 
-import com.steve.springbootblogapplication.model.Post;
+import com.steve.springbootblogapplication.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
 @Repository
-public interface IPostRepository extends JpaRepository<Post, Long> {
+public interface IAccountRepository extends JpaRepository<Account, Long> {
 }
