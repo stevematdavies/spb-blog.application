@@ -2,6 +2,7 @@ package com.steve.springbootblogapplication.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -12,5 +13,13 @@ public class LoginController {
     public String getLoginPage(){
         return "login";
     }
+
+    @PostMapping
+    public String doLogin(){
+        return "login";
+    }
+
+
+
 
 }
