@@ -25,11 +25,14 @@ public class SeedData implements CommandLineRunner {
         if(posts.size() == 0){
             Post post1 = new Post();
             post1.setTitle("title of post 1");
-            post1.setTitle("body of post 1");
+            post1.setBody("body of post 1");
 
             Post post2 = new Post();
             post2.setTitle("title of post 2");
-            post2.setTitle("body of post 2");
+            post2.setBody("body of post 2");
+
+            postService.save(post1);
+            postService.save(post2);
         }
     }
 }
