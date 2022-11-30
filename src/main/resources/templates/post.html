@@ -8,16 +8,12 @@
     <title th:text="${post.title}"></title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="post">
-                <h2 th:text="${post.title}" class="text-center">Title</h2>
-                <h5 th:text="'Created on ' + ${post.createdAt}" class="text-muted">Created At</h5>
-                <p th:text="${post.body}">body text</p>
-            </div>
+    <div class="container">
+        <div class="post">
+            <h2 th:text="${post.title}" class="text-center">Title</h2>
+            <h5 th:text="'Created on ' + ${post.createdAt}" class="text-muted">Created At</h5>
+            <p th:text="${post.body}">body text</p>
         </div>
     </div>
-</div>
 </body>
 </html>
